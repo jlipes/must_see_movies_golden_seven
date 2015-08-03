@@ -1,0 +1,27 @@
+ <a href="http://localhost:3000/directors/new_form">Add A New Director</a>
+
+ <table width=25%>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% @data.each do |s| %>
+  <tr>
+   <td>
+     <a href="http://localhost:3000/directors/<%= s.id %>">Show Details</a>
+   </td>
+   <td>
+    <%= s.name %>
+  </td>
+  <td>
+    <a href="http://localhost:3000/directors/<%= s.id %>/edit_form">Edit</a>
+  </td>
+  <td>
+    <a href="http://localhost:3000/delete_director/<%= s.id %>">Delete</a>
+  </td>
+</tr>
+<% end %>
+
+</table>

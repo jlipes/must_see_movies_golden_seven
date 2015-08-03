@@ -2,6 +2,14 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+get("/directors", { :controller => "movies", :action => "directors" })
+get("/directors/new_form", { :controller => "movies", :action => "new_form" })
+get("/directors/add", { :controller => "movies", :action => "add" })
+get("/directors/:id", { :controller => "movies", :action => "details" })
+get("/directors/:id/edit_form", { :controller => "movies", :action => "edit_form" })
+get("/update_directors/:id", { :controller => "movies", :action => "update_form" })
+get("/delete_director/:id", { :controller => "movies", :action => "delete" })
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

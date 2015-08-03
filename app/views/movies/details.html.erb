@@ -1,0 +1,36 @@
+<table width=50%>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Date of Birth</th>
+    <th>Image</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+
+<tr>
+   <td>
+     <%= @s.name %>
+   </td>
+   <td>
+    <%= @s.bio %>
+  </td>
+  <td>
+    <%= @s.dob %>
+  </td>
+  <td>
+    <img src="<%= @s.image_url %>" class="img-responsive">
+  </td>
+  <td>
+    <a href="http://localhost:3000/directors/<%= @s.id %>/edit_form">Edit</a>
+  </td>
+  <td>
+    <a href="http://localhost:3000/delete_director/<%= @s.id %>">Delete</a>
+  </td>
+</tr>
+
+</table>
+
+<p>
+<a href="/directors">Back</a>
+</p>
